@@ -7,6 +7,6 @@ void setup() {
 void loop() {
   digitalWrite(Led, LOW); //liga o Led
   delay(1000);            //espera 1 segundo
-  digitaWrite(Led, HIGH); //liga o led
+  digitalWrite(Led, HIGH); //liga o led
   delay(1000);            //espera 1 segundo
 }

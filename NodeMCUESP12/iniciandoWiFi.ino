@@ -17,7 +17,7 @@ void setup(){
 
     //mensagem de debug serial
     Serial.print("Conectando para a rede ");
-    serial.println(ssid);
+    Serial.println(ssid);
 
     //iniciando a conexão WiFi
     WiFi.begin(ssid, senha);
