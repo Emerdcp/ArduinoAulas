@@ -16,7 +16,7 @@ const char* senha = "senha";
 WiFiServer server(80); //instncia o server na porta 80
 
 void setup() {
-    Serial.begin(115200); //configura comunicação serial
+    Serial.begin(9600); //configura comunicação serial
     delay(10);
 
     // mensagem de debug serial
@@ -58,7 +58,7 @@ void loop() {
     }
 
     String txt = ""; //string para montar o html
-                                                                            //ver aqui      \/
+
     txt += "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n<!DOCTYPE HTML>\r\n<html><meta http-equiv='refresh' content='3'>\r\n";
     txt += "<h1>Ola Makers!</h1>";
     txt += "<h2>Workshop ESP8266</h2>";
