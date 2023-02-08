@@ -3,8 +3,8 @@
 
 #include <ESP8266WiFi.h>
 
-const char* ssid = "********";
-const char* password = "********";
+const char* ssid = "Emerson";
+const char* password = "1406junho";
 
 WiFiServer server(80); //Shield irá receber as requisições das páginas (o padrão WEB é a porta 80)
 
@@ -26,7 +26,7 @@ byte pinosAnalogicos[qtdePinosAnalogicos] = {A0};
 
 void setup()
 {         
-    Serial.begin(115200);
+    Serial.begin(9600;
 
     //Conexão na rede WiFi
     Serial.println();
