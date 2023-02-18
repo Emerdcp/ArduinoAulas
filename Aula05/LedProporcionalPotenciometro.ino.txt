@@ -8,6 +8,7 @@ int valor_mapeado = 0;
 
 void setup(){
 	pinMode(led, OUTPUT);
+	Serial.begin(9600);
 }
 
 void loop(){
@@ -15,5 +16,6 @@ void loop(){
 	valor_mapeado = map(valor, 0, 1023, 0, 2555);
 	//map(potenciomêtro, inicio pot, fim pot, inicio led, fim)
 	analogWrite(led, valor_mapeado);
+	Serial.println(valor_mapeado);
 	delay(100);
 }
