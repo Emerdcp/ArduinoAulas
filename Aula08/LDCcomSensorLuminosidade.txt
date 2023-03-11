@@ -1,0 +1,47 @@
+/* 
+Display LCD com sensor de luminosidade 
+*/
+
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+
+int led = 13;
+int ldr = A0;
+int valor = 0;
+
+
+void setup(){
+	lcd.begin(16,2);
+    lcd.print("Inicio");
+	pinMode(led, OUTPUT);
+    Serial.begin(9600); 
+}
+
+
+void loop(){
+	valor = analogRead(ldr);
+	Serial.println(valor);
+ 	delay(1000);
+	
+    if(valor < 500){
+		digitalWrite(led, 1);
+	}else{
+		digitalWrite(led, 0);
+	}
+    lcd.clear();
+    lcd.setCursor(0,0);
+	lcd.print("Claridade:");
+	lcd.print(valor);
+  
+    lcd.setCursor(0,1);
+	lcd.print("Periodo:");
+    if(valor < 500){
+      lcd.print("Noite");
+    }else{
+      lcd.print("Dia");
+    }
+  
+	delay(1000);
+
+}
